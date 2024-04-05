@@ -14,7 +14,7 @@ const About = () => (
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.flexCenter} flex-col`}>
+      className={`${styles.flexCenter} ${styles.innerWidth} flex-col mx-auto`}>
       <TypingText title="| About Metaversus" textStyles="text-center" />
       <motion.p
         variants={fadeIn("up", "tween", 0.2, 1)}

@@ -7,12 +7,20 @@ export const TypingText = ({ title, textStyle }) => (
   <motion.p
     variants={textContainer}
     className={`${textStyle} font-normal text-[14px] text-secondary-white `}>
-        {Array.from(title).map((letter, index) => (
-            <motion.span variants={textVariant2} key={index} >
-                {letter === " " ? "\u00A0" : letter}
-            </motion.span>
-        ))}
-    </motion.p>
+    {Array.from(title).map((letter, index) => (
+      <motion.span variants={textVariant2} key={index}>
+        {letter === " " ? "\u00A0" : letter}
+      </motion.span>
+    ))}
+  </motion.p>
 );
 
-export const TitleText = ({ title, textStyle }) => <h2>Title Text</h2>;
+export const TitleText = ({ title, textStyle }) => (
+  <motion.h2
+    variants={textVariant2}
+    initial="hidden"
+    whileInView={"show"}
+    className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyle}`}>
+    {title}
+  </motion.h2>
+);
