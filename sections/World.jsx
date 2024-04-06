@@ -31,7 +31,7 @@ const World = () => (
           src="/map.png"
           alt="map"
           lazy
-          className="w-full h-full object-fit"
+          className="w-full h-full object-cover"
         />
         <div className="absolute bottom-20 right-20 size-[70px] p-[6px] rounded-full bg-[#5d6680] ">
           <img
@@ -45,7 +45,7 @@ const World = () => (
           <img
             src="people-02.png"
             alt="person"
-            className="w-full h-full"
+            className="w-full h-full "
             lazy
           />
         </div>
